@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Palindrome Recognizer</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+<div class="container p-4 text-center">
+    <h1 class="text-primary my-3">  Palindrome Recognizer</h1>
+<div class="text-center bg-white rounded-3 w-75 p-3 shadow-lg " style="margin:20px auto">
+<label class="form-label"> enter a word or phrase</label>
+<input type="text" id="text" class="form-control mb-3">
+<button class="btn btn-success" onclick="palindrome()"> Check Palindrome</button>
+<h3 id="output"></h3>
+</div>
+</div>
+<script>
+    function palindrome(){
+        let textInput=document.getElementById("input").value;
+        let reversedText = textInput.split("").reverse().join("");
+        if(textInput==reversedText){
+            document.getElementById("output").innerHTML="this is a palindrome";
+        }
+        else{
+document.getElementById("output").innerHTML="This is NOT a palindrome"
+        }
+    }
+</script>
+    </body>
+</html>
