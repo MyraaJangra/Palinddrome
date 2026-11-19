@@ -12,12 +12,12 @@
 <label class="form-label"> enter a word or phrase</label>
 <input type="text" id="text" class="form-control mb-3">
 <button class="btn btn-success" onclick="palindrome()"> Check Palindrome</button>
-<h3 id="output"></h3>
+<h3 id="output" class="my-3"></h3>
 </div>
 </div>
 <script>
     function palindrome(){
-        let textInput=document.getElementById("input").value;
+        let textInput=document.getElementById("text").value;
         let reversedText = textInput.split("").reverse().join("");
         if(textInput==reversedText){
             document.getElementById("output").innerHTML="this is a palindrome";
